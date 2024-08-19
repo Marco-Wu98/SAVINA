@@ -1,0 +1,139 @@
+@import url(http://localhost:8080/savina/static/css/base.css);
+
+@import url(http://localhost:8080/savina/static/css/base.css);
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(http://localhost:8080/savina/static/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        height: 540px;
+        width: 390px;
+        align-items: center;
+
+
+        .form-header {
+            color: var(--text-color);
+            text-align: center;
+
+            .form-title__1 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 130px;
+                /*text-shadow: 0 0 20px var(--border-color);*/
+            }
+
+            .form-title__2 {
+                font-size: 15px;
+            }
+
+            .message{
+                color: var(--warning-color);
+                text-align: center;
+            }
+        }
+
+        .form-body {
+            margin-top: 20px;
+
+            .form-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                width: 350px;
+                border-radius: 50px;
+                border: 1px solid transparent;
+                padding: 0 10px;
+                margin-bottom: 16px;
+                background-color: rgb(128, 128, 128, 0.3);
+                transition: all 0.3s ease;
+                overflow: hidden;
+
+                input {
+                    width: 100%;
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    line-height: 50px;
+
+                    &::placeholder {
+                        color: var(--text-color);
+                    }
+                }
+
+                i {
+                    color: var(--text-color);
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+
+                &:hover {
+                    background-color: rgb(128, 128, 128, 0.1);
+                    border: 1px solid rgb(51, 51, 51);
+                    cursor: text;
+                }
+
+
+                &:last-child {
+                    background-color: var(--secondary-color);
+
+                    input {
+                        font-weight: bold;
+                        width: 100%;
+                        display: inline-block;
+                        margin: 0 auto;
+                        color: var(--text-color);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: var(--primary-color);
+                        border: transparent;
+                    }
+                }
+            }
+        }
+
+        .form-footer {
+            width: 350px;
+            /* display: flex; */
+            justify-content: space-between;
+            color: var(--text-color);
+
+            div {
+                float: right;
+
+                a {
+                    color: var(--text-color);
+                }
+            }
+        }
+
+
+    }
+
+}
+@media only screen and (max-width: 500px) {
+    .main {
+        form {
+            .form-header {
+                .form-title__1 {
+
+                    font-size: 100px;
+
+                }
+            }
+        }
+    }
+}

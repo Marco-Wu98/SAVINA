@@ -1,0 +1,328 @@
+@import url(http://localhost:8080/savina/static/css/base.css);
+
+
+.container-fluid {
+    background-color: #F0F0F0;
+    padding-top: 20px;
+
+    .title {
+        h5 {
+
+        }
+    }
+
+    .wrapper {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        padding: 30px 0;
+
+
+        .cartItems {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+
+            .emptyIcon {
+                margin-bottom: 20px;
+            }
+        }
+
+        .buy-btn {
+            .btn {
+                background-color: var(--primary-color);
+                color: var(--text-color);
+
+                &:hover {
+                    background-color: var(--secondary-color);
+                }
+            }
+        }
+
+        .row {
+            padding: 0 30px;
+
+            .addItems {
+                padding-right: 30px;
+
+                .addItem {
+                    height: 156px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+
+
+                    .book-img {
+                        width: 126px;
+
+                        .book-img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+
+
+                    }
+
+                    .row {
+                        height: 100%;
+                        width: 100%;
+
+                        .book-detail {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+
+                            .book-title {
+                                width: 100%;
+                                color: var(--item-color);
+                            }
+
+                            .book-price {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                .sale {
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    margin-right: 10px;
+                                }
+
+                                .origin {
+                                    font-size: 15px;
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .quantity {
+                                width: 40%;
+                                display: flex;
+                                align-items: center;
+                                line-height: 35px;
+                                margin-left: 12px;
+
+                                .quantity-control {
+
+                                    height: 35px;
+                                    width: 100%;
+                                    border: 1px solid var(--border-color);
+                                    border-radius: 5px;
+
+                                    form {
+                                        width: 30%;
+
+                                        button {
+                                            width: 100%;
+                                            height: 100%;
+                                            border: none;
+                                            background-color: transparent;
+                                            text-align: center;
+                                        }
+                                    }
+
+                                    .quantity-input {
+                                        display: inline-block;
+                                        width: 30%;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                            div {
+                                padding: 0 10px;
+                                width: 60%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .price {
+                                    color: #C92127;
+                                    font-weight: 600;
+                                    margin-left: 35px;
+                                }
+
+
+                                a {
+                                    display: inline-block;
+
+                                    i {
+                                        color: black;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.title {
+
+                        height: 40px;
+                        padding: 0 50px 0 10px;
+                        border-radius: 10px;
+                        background-color: rgba(253, 203, 208, 0.4);
+                        display: flex;
+                        justify-content: space-around;
+
+                        .quantity {
+                            margin-left: 20%;
+                        }
+                    }
+                }
+            }
+
+            .payment {
+                background-color: rgba(253, 203, 208, 0.4);
+                height: 190px;
+                border-radius: 10px;
+                padding: 20px;
+
+                .sum {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .VAT {
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                button {
+                    margin-top: 20px;
+                    width: 100%;
+                    color: var(--text-color);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+/*CSS for check box*/
+
+input[type=radio], input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 8px;
+    background-color: #f6f6f6;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+    border-radius: 4px;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label:before {
+    content: "\2714"; /* Tick */
+    color: var(--text-color);
+    text-align: center;
+    line-height: 20px;
+
+}
+
+#checkout-button:disabled {
+    background-color: var(--item-color);
+    border-color: var(--item-color);
+}
+
+@media only screen and (max-width: 500px) {
+    .container-fluid {
+        .wrapper {
+            .row {
+                height: 100%;
+                justify-content: center;
+
+                .addItems {
+                    padding: 0;
+
+                    .addItem {
+
+                        &.title {
+                            font-size: 16px;
+
+                            .quantity, .price {
+                                display: none;
+                            }
+                        }
+
+                        .book-img {
+                            height: 100%;
+
+                            a {
+                                display: inline-block;
+                                height: 100%;
+                                width: 100%;
+
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+
+                        .row {
+                            padding: 10px 0;
+
+                            .book-detail {
+                                justify-content: space-evenly;
+                                height: 70%;
+
+                                .book-price {
+                                    display: flex;
+                                    justify-content: space-around;
+
+                                    span {
+                                        display: inline-block;
+
+                                        &:first-child {
+                                            color: #C92127;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+                            }
+
+                            div {
+                                height: 30%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .quantity {
+                                    width: 60%;
+                                    height: 100%;
+                                }
+
+                                div {
+                                    display: flex;
+                                    justify-content: center;
+
+                                    .price {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

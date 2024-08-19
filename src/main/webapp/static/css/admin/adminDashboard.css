@@ -1,0 +1,217 @@
+@import url(http://localhost:8080/savina/static/css/base.css);
+
+
+* {
+    user-select: none;
+}
+
+.main {
+    background-color: #F0F0F0;
+
+    .core {
+        .content {
+            .row {
+                .transaction {
+                    background-color: #FFFFFF;
+                    margin: 20px 0;
+                    padding: 20px;
+                    border-radius: 5px;
+                    position: relative;
+
+                    img {
+                        width: 280px;
+                        height: 196px;
+                        object-fit: contain;
+                        position: absolute;
+                        right: -60px;
+                        bottom: -108px;
+                    }
+
+                    h5 {
+
+                    }
+
+                    h6 {
+                        margin-bottom: 30px;
+                    }
+
+                    .items {
+                        display: flex;
+
+                        .item {
+                            display: flex;
+
+                            .statistic {
+                                display: flex;
+                                flex-direction: column;
+
+                                span {
+                                    &:nth-child(2) {
+                                        font-weight: 500;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+
+                            i {
+                                height: 53px;
+                                width: 53px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 10px;
+                                padding: 8px;
+                                font-size: 24px;
+                                border-radius: 5px;
+                                color: #FFFFFF;
+
+
+                            }
+
+                            &:nth-child(1) {
+                                i {
+                                    background-color: #370298;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                i {
+                                    background-color: #45A200;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                i {
+                                    background-color: #CC9000;
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                i {
+                                    background-color: #007FBF;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .users {
+                background-color: #FFFFFF;
+
+                margin-top: 20px;
+                border-radius: 5px;
+
+                .search-bar {
+                    margin-bottom: 10px;
+
+                    input {
+                        height: 50px;
+                        border: none;
+                        border-bottom: 1px solid #ccc;
+                        border-radius: 0;
+
+                        &:focus {
+                            outline: none; /* Loại bỏ đường viền outline */
+                            box-shadow: none; /* Loại bỏ đổ bóng */
+                            border-color: initial; /* Khôi phục màu viền ban đầu */
+                        }
+                    }
+                }
+
+                .table-container {
+                    max-height: 396px;
+                    overflow-y: auto;
+                }
+            }
+
+            .customChart {
+                padding: 20px;
+                background-color: #FFFFFF;
+                border-radius: 5px;
+                position: relative;
+
+                .top-book-table {
+                    position: relative;
+
+                    .bestSeller {
+                        position: absolute;
+                        top: -240px;
+                        right: -90px;
+                        transform: scale(0.5);
+                    }
+
+                    table {
+
+
+                    }
+
+                }
+            }
+        }
+
+        .chart {
+            height: 400px;
+            width: 400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 996px) {
+    .main {
+        .core {
+            .chart {
+                height: auto;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .main {
+        .core {
+            .content {
+                .customChart {
+                    .top-book-table {
+                        .bestSeller {
+                            display: none;
+                        }
+                    }
+                }
+
+                .row {
+                    .transaction {
+                        .items {
+                            .item {
+                                margin-bottom: 5px;
+
+                                .statistic {
+                                    span {
+                                        &:nth-child(2) {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+
+                                i {
+                                    height: 40px;
+                                    width: 40px;
+                                }
+                            }
+                        }
+
+                        img {
+                            width: 214px;
+                            height: 156px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

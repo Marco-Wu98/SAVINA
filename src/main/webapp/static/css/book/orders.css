@@ -1,0 +1,182 @@
+@import url(http://localhost:8080/savina/static/css/base.css);
+
+.main {
+
+    .wrapper {
+        background-color: #F0F0F0;
+        padding-top: 20px;
+
+        .orders {
+            background-color: #FFFFFF;
+            padding-top: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+            h4 {
+                margin-left: 10px;
+            }
+
+            .options {
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                    text-align: center;
+                    color: var(--item-color);
+                    padding: 5px 0;
+                    font-weight: 500;
+
+                    &.active {
+                        color: #C92127;
+                        border-bottom: 2px solid #C92127;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+
+        .cartItems {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            div{
+                margin-bottom: 20px;
+            }
+            p{
+                margin: 0;
+                color: var(--item-color);
+            }
+        }
+
+        .order-wrapper {
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 20px var(--item-color);
+            }
+
+            .order {
+                margin: 0 auto;
+                width: 96%;
+                height: auto;
+
+                hr {
+                    color: var(--item-color); /* Màu của đường kẻ ngang */
+                }
+
+                .order-header {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .id {
+                        width: 480px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            &:first-child {
+                                color: #45bbfb;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+
+                .order-body {
+                    height: auto;
+
+                    div {
+                        height: 110px;
+                        display: flex;
+
+                        img {
+                            height: 100%;
+                            width: 100px;
+                            object-fit: contain;
+                        }
+                    }
+                }
+
+                .order-footer {
+
+                    .totalAmount {
+                        display: flex;
+                        justify-content: flex-end;
+
+                        span {
+                            &:first-child {
+                                margin-right: 10px;
+                                color: var(--item-color);
+                            }
+
+                            &:last-child {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 10px;
+
+                        .quantity {
+                            color: var(--item-color);
+                        }
+
+                        .button {
+                            z-index: 9;
+                            width: 150px;
+
+                            a {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+         .wrapper {
+              .order-wrapper {
+                  .order {
+                      .order-header {
+
+                          .id {
+                              display: flex;
+                              align-items: center;
+                              font-size: 12px;
+
+                         }
+                     }
+                 }
+             }
+             .orders {
+                 .options {
+                     a {
+                        span{
+                            &:nth-child(2){
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

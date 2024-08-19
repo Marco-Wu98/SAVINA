@@ -1,0 +1,248 @@
+@import url(http://localhost:8080/savina/static/css/base.css);
+
+
+.slider-wrapper {
+    height: 146px;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.brand-slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+
+}
+
+
+.slider {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.slider::before,
+.slider:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 150px;
+    z-index: 2;
+}
+
+.slider:after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider:before {
+    left: 0;
+    top: 0;
+}
+
+.slider .track {
+    display: flex;
+    width: calc(150px * 12);
+    animation: slide 20s linear infinite;
+}
+
+.slider .element {
+    width: 150px;
+    background-color: white;
+    padding: 50px 25px;
+    margin: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-150px * 6));
+    }
+}
+
+/* ====================================================== */
+
+
+.footer-wrapper {
+    background-color: #FFFFFF;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+    .footer {
+        height: 100%;
+
+        .introduct {
+            height: 100%;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--border-color);
+            padding: 0 40px;
+
+            .brand {
+                width: 100%;
+                height: 88px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transform: scale(3);
+                }
+            }
+
+            .social-1 {
+                width: 96px;
+                height: 30px;
+                margin-bottom: 20px;
+
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .social-2 {
+                margin-bottom: 20px;
+            }
+
+            .social-3 {
+                display: flex;
+                margin-bottom: 20px;
+
+                img {
+                    width: 110px;
+                    height: 34px;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .info {
+            padding-left: 50px;
+
+            .info-1 {
+                .item {
+                    margin: 20px 0;
+
+                    &:first-child {
+                        font-weight: 700;
+                    }
+
+                    &:not(:first-child) {
+                        font-size: 14px;
+                        transition: all 0.3s linear;
+
+                        &:hover {
+                            transform: translateX(20px);
+                            transition: all 0.3s linear;
+                            color: var(--primary-color);
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+            }
+
+            .info-2 {
+                margin-top: 20px;
+
+                .contact {
+                    font-weight: 700;
+                    margin-left: 2px;
+                }
+
+                .item {
+                    margin-top: 10px;
+                }
+            }
+
+            .info-3 {
+
+                .info-3-1,
+                .info-3-2 {
+                    height: 61px;
+                    margin: 20px 0;
+
+                    .item {
+                        height: 100%;
+                        text-align: center;
+
+                        img {
+                            width: 60%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .slider-wrapper {
+        height: 50px;
+
+        .brand-slider {
+            .slider {
+                .element {
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-wrapper {
+        font-size: 12px;
+        padding-bottom: 20px;
+
+        .footer {
+            .introduct{
+                font-size: 12px;
+            }
+            .info {
+               .info-1{
+                   .service, .support, .account{
+                       .item{
+                           font-size: 12px;
+                       }
+                   }
+               }
+
+                .info-3 {
+                    display: none;
+                }
+            }
+        }
+    }
+}

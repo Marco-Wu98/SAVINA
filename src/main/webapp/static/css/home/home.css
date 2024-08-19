@@ -1,0 +1,123 @@
+@import url(http://localhost:8080/savina/static/css/base.css);
+
+.main {
+
+
+    .body {
+        background-color: #F0F0F0;
+
+
+        .sale {
+            padding-top: 16px;
+
+            .sale-up {
+                .sale-up__carousel {
+                    position: relative;
+                    padding: 0;
+
+                    .carousel {
+                        border-radius: 10px;
+                        overflow: hidden;
+
+
+                        img {
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .carousel-control-prev {
+                        width: 0;
+                        position: absolute;
+
+                        i {
+                            position: relative;
+                            color: red;
+                            font-size: 24px;
+                            transition: all .2s ease;
+
+                            &:hover {
+                                font-size: 38px;
+                                transition: all .2s ease;
+                            }
+                        }
+
+                    }
+
+                    .carousel-control-next {
+                        width: 0;
+                        position: absolute;
+
+                        i {
+                            position: relative;
+                            color: red;
+                            font-size: 24px;
+                            transition: all .2s ease;
+
+                            &:hover {
+                                font-size: 38px;
+                                transition: all .2s ease;
+                            }
+                        }
+
+                    }
+
+                }
+
+                .sale-up__side {
+
+
+                    a {
+                        height: 48%;
+
+                        img {
+                            border-radius: 10px;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+
+                }
+            }
+
+            .sale-down {
+                margin-top: 25px;
+
+                img {
+                    border-radius: 10px;
+
+                }
+            }
+        }
+    }
+
+    .core {
+        .core-books {
+
+        }
+
+        .core-footer {
+            nav {
+                .pagination {
+
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+        & .body {
+            & .sale {
+                .sale-down {
+                    .item{
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+

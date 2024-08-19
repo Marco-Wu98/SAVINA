@@ -1,0 +1,27 @@
+:root {
+    /*--primary-color: #099bcc;*/
+    /*--secondary-color: #52afca;*/
+    --primary-color: #FFA4AC;
+    --secondary-color: #FAC9D2FF;
+    --text-color: #fff;
+    --warning-color: #bc4a4a;
+    --border-color: rgba(205, 207, 208, 0.5);
+    --item-color: #949494;
+    --background-color: #F0F0F0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* Hide the default eye icon in Edge */
+
+    input[type="password"]::-ms-reveal {
+        display: none;
+    }
+}
+
+
+
+
